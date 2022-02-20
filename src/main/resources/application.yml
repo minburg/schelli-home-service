@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./data/h2;AUTO_SERVER=TRUE
+    username: sa
+    password: password
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+
+external-api:
+  diyHue:
+    host: 192.168.30.17
+
+
+server:
+  port: 8585
+
+
+logging:
+  level:
+    feign.Logger: DEBUG
+    dev.brgr.schellihomeservice.*: DEBUG
+
