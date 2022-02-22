@@ -9,4 +9,4 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 # docker save -o ~/schelli.tar brgr/schelli-home-service
 # copy file
 # sudo docker load -i <path to image tar file>
-# sudo docker run -p 8585:8585 brgr/schelli-home-service
+# sudo docker run -d --restart="always" -e TZ=Europe/Berlin -p 8585:8585 brgr/schelli-home-service
