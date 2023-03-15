@@ -39,7 +39,7 @@ public class LightTimerController {
     }
 
     @DeleteMapping("/timer/{timerId}")
-    public ResponseEntity<Object> deleteTimer(@PathVariable("timerId") long timerId) {
+    public ResponseEntity<Void> deleteTimer(@PathVariable("timerId") long timerId) {
         timerCRUDOperations.deleteTimer(timerId);
         return new ResponseEntity<>(HttpStatus.OK);
     }

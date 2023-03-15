@@ -8,6 +8,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class LightStateResponse {
-    private State state;
+public class State {
+    private boolean on;
 }

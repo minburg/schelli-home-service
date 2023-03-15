@@ -19,7 +19,6 @@ public class CustomCorsFilter extends GenericFilterBean {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        log.info(((HttpServletRequest) request).getHeader("Origin"));
         ((HttpServletResponse) response).addHeader("Access-Control-Allow-Origin", ((HttpServletRequest) request).getHeader("Origin"));
         ((HttpServletResponse) response).addHeader("Access-Control-Allow-Methods", "GET,HEAD,PUT,PATCH,POST,DELETE");
         ((HttpServletResponse) response).addHeader("Access-Control-Allow-Headers", "Content-Type, Accept, authorization");
