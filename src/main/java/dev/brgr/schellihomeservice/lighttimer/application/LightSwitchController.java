@@ -22,7 +22,7 @@ public class LightSwitchController {
         return ResponseEntity.ok(lightStateMapper.mapLightStateToLightStateDto(lightStateOperation.getLightState(bridgeId, lightId)));
     }
 
-    @PostMapping("/light")
+    @PutMapping("/light")
     public ResponseEntity<LightStateDto> switchLight(@RequestBody LightSwitchDto lightSwitchDto) {
         return ResponseEntity.ok(lightStateMapper.mapLightStateToLightStateDto(lightStateOperation.switchLight(lightStateMapper.mapLightSwitchDtoToLightSwitch(lightSwitchDto))));
 
